@@ -15,7 +15,7 @@ class _ProfilePage extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,7 +45,7 @@ class _ProfilePage extends State<ProfilePage> {
                   onTap: () {
                     showDialog(
                         context: context,
-                        builder: (context) {
+                        builder: (index) {
                           return Dialog(
                             child: Container(
                               height: 100,
@@ -104,14 +104,14 @@ class _ProfilePage extends State<ProfilePage> {
                 ),
               ],
             ),
-            Text('  Rustamov'),
+            Text('Rustamov'),
             RichText(
                 text: TextSpan(children: [
-              TextSpan(text: '  Student in Access and ProLab Flutter '),
+              TextSpan(text: 'Student in Access and ProLab Flutter '),
               TextSpan(
-                  text: ' @rustamows.l7 ',
+                  text: '@rustamows.l7 ',
                   style: TextStyle(color: Colors.blue)),
-              TextSpan(text: ' this my another profile '),
+              TextSpan(text: 'this my another profile '),
             ])),
             SizedBox(
               height: 15,
@@ -130,6 +130,7 @@ class _ProfilePage extends State<ProfilePage> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ),
+            SizedBox(height: 12,),
             SizedBox(
               height: 83,
               child: ListView(
@@ -206,11 +207,11 @@ class _ProfilePage extends State<ProfilePage> {
             if (post)
               Expanded(
                   child: GridView.builder(
-                      itemCount: 20,
+                      itemCount: 50,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3),
+                          crossAxisCount: 3, mainAxisSpacing: 4, crossAxisSpacing: 4),
                       itemBuilder: (context, index) {
-                        return Image.network(
+                        return Image.network(fit: BoxFit.cover, 
                             'https://tse3.mm.bing.net/th?id=OIP.860tcrCo0PCgGBRfT_2HmgHaEK&pid=Api&P=0&h=220');
                       }))
           ],

@@ -8,6 +8,7 @@ import 'package:lesson9/lesson10.dart';
 import 'package:lesson9/number.dart';
 import 'package:lesson9/post.dart';
 import 'package:lesson9/reclama.dart';
+import 'package:lesson9/ui/home_page.dart';
 import 'package:lesson9/ui/profile_page.dart';
 import 'package:lesson9/users.dart';
 
@@ -22,7 +23,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfilePage(),
+      home: MHomePage(),
     );
   }
 }
